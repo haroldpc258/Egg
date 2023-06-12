@@ -8,7 +8,6 @@ public class Ejercicio11 {
 
         System.out.println("Bienvenido!");
         System.out.print("\nIngrese una secuencia de caracteres terminada en punto: ");
-
         String frase = ingresoCaracteres(scanner);
 
         String codificada = codificacion(frase);
@@ -33,10 +32,11 @@ public class Ejercicio11 {
     }
 
     public static String codificacion(String frase) {
+
         /*String codificada = "";
         char caracter;
 
-        for (int i = 0; i < frase.length() - 1; i++) {
+        for (int i = 0; i < frase.length(); i++) {
             caracter = frase.charAt(i);
             switch (caracter) {
                 case 'a', 'A' -> codificada += '@';
@@ -50,17 +50,18 @@ public class Ejercicio11 {
         String codificada = "";
         String caracter;
 
-        for (int i = 0; i < frase.length() - 1; i++) {
+        for (int i = 0; i < frase.length(); i++) {
             caracter = frase.substring(i, i + 1);
 
             switch (caracter) {
-                case "a", "A" -> codificada += '@';
-                case "e", "E" -> codificada += '#';
-                case "i", "I" -> codificada += '$';
-                case "o", "O" -> codificada += '%';
-                case "u", "U" -> codificada += '*';
-                default -> codificada += caracter;
+                case "a", "A" -> caracter = "@";
+                case "e", "E" -> caracter = "#";
+                case "i", "I" -> caracter = "$";
+                case "o", "O" -> caracter = "%";
+                case "u", "U" -> caracter = "*";
             }
+
+            codificada += caracter;
         }
         return  codificada;
     }
